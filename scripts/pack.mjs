@@ -9,10 +9,20 @@ import { fileURLToPath } from 'node:url';
 export const root = fileURLToPath(new URL('../', import.meta.url));
 export const plan = JSON.parse(fs.readFileSync(path.join(root, 'PUBLICATION_PLAN.json')));
 export function npm(args, cwd, options = {}) {
-  if (process.platform !== 'win32') return execFileSync('npm', args, { cwd, encoding: 'utf8', ...options });
-  const quote = value => "'" + value.replaceAll("'", "''") + "'";
-  return execFileSync('powershell.exe', ['-NoProfile', '-NonInteractive', '-Command',
-    '& npm.cmd ' + args.map(quote).join(' ') + '; exit $LASTEXITCODE'], { cwd, encoding: 'utf8', ...options });
+  const tools = path.resolve(process.env.DEPENDENCY_PUBLISHER_TOOLS || path.join(root, '.artifacts/tools'));
+  const pin = JSON.parse(fs.readFileSync(path.join(root, 'PUBLISHER.json')));
+  assert.equal(JSON.parse(fs.readFileSync(path.join(tools, 'npm/package.json'))).version, pin.auditClient.version);
+  return execFileSync(process.execPath, [path.join(tools, 'npm/bin/npm-cli.js'), ...args], { cwd, encoding: 'utf8', ...options });
+}
+export function parsePackInfo(output, record) {
+  const records = JSON.parse(output);
+  assert.deepEqual(Object.keys(records), [record.name], 'Expected exactly the requested package from the pinned npm client');
+  const info = records[record.name];
+  assert.equal(info.name, record.name);
+  assert.equal(info.version, record.version);
+  assert.equal(info.filename, record.name.replace(/^@/, '').replace('/', '-') + '-' + record.version + '.tgz');
+  assert.ok(Array.isArray(info.files));
+  return info;
 }
 export function inventory(directory, prefix = '') {
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
@@ -32,7 +42,7 @@ export function pack(output) {
     assert.equal(manifest.name, record.name);
     assert.equal(manifest.version, record.version);
     assert.ok(!manifest.scripts, 'Reviewed distributions have no lifecycle/build scripts');
-    const info = JSON.parse(npm(['pack', '--ignore-scripts', '--json', '--pack-destination', output], directory))[0];
+    const info = parsePackInfo(npm(['pack', '--ignore-scripts', '--json', '--pack-destination', output], directory), record);
     assert.deepEqual(info.files.map(file => file.path).sort(), record.files, 'Actual npm payload differs: ' + record.name);
     return { ...record, archive: path.join(output, info.filename), archiveName: info.filename, pack: info };
   });

@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { test } from 'node:test';
 import { publicationBlockers, publicationArguments, runPublisher } from '../scripts/publisher.mjs';
+import { parsePackInfo } from '../scripts/pack.mjs';
 const plan = JSON.parse(fs.readFileSync(new URL('../PUBLICATION_PLAN.json', import.meta.url)));
 const pin = JSON.parse(fs.readFileSync(new URL('../PUBLISHER.json', import.meta.url)));
 const context = { repository: plan.repository, ref: 'refs/heads/main', workflowRef: plan.repository + '/' + plan.publisher.workflow + '@refs/heads/main', oidcToken: 'synthetic', oidcUrl: 'synthetic' };
@@ -25,4 +26,15 @@ test('publisher arguments retain provenance, strict destination and disabled lif
 test('unknown flags and credentials cannot turn a dry run into publishing', () => {
   for (const args of [[], ['--force'], ['--publish', '--dry-run']]) assert.throws(() => runPublisher(args, {}));
   assert.throws(() => runPublisher(['--dry-run'], { NODE_AUTH_TOKEN: 'synthetic' }), /no publishing credentials/);
+});
+test('the pinned npm pack response identifies exactly one matching safe archive', () => {
+  const record = { name: '@page-and-ribbon/glob-sync', version: '0.1.4' };
+  const info = { ...record, filename: 'page-and-ribbon-glob-sync-0.1.4.tgz', files: [] };
+  const output = value => JSON.stringify({ [record.name]: value });
+  assert.deepEqual(parsePackInfo(output(info), record), info);
+  assert.throws(() => parsePackInfo(JSON.stringify([info]), record));
+  assert.throws(() => parsePackInfo(JSON.stringify({ [record.name]: info, other: info }), record));
+  for (const invalid of [{ name: 'other' }, { version: '0.1.5' }, { filename: '../other.tgz' }, { files: null }]) {
+    assert.throws(() => parsePackInfo(output({ ...info, ...invalid }), record));
+  }
 });
