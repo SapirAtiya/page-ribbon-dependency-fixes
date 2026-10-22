@@ -14,6 +14,18 @@ export const signingIdentity = `https://github.com/${repository}/${workflow}@ref
 export const signingIssuer = 'https://token.actions.githubusercontent.com';
 const hash = (bytes, algorithm) => crypto.createHash(algorithm).update(bytes).digest('hex');
 
+export function encodedCertificateField(value) {
+  const bytes = Buffer.from(value, 'utf8');
+  assert.ok(bytes.length < 128, 'Only the short reviewed certificate fields are supported');
+  // Fulcio OIDs 1.8 onward contain DER UTF8Strings; Sigstore compares their raw DER bytes.
+  return Buffer.concat([Buffer.from([0x0c, bytes.length]), bytes]);
+}
+export function certificatePolicy(expected) {
+  return { certificateIssuer: signingIssuer, certificateIdentityURI: '^' + signingIdentity.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '$',
+    certificateOIDs: Object.fromEntries(Object.entries({ '1.3.6.1.4.1.57264.1.11': 'github-hosted', '1.3.6.1.4.1.57264.1.12': `https://github.com/${repository}`,
+      '1.3.6.1.4.1.57264.1.13': expected.commit, '1.3.6.1.4.1.57264.1.14': 'refs/heads/main' }).map(([oid, value]) => [oid, encodedCertificateField(value)])) };
+}
+
 export function expectedPackages() {
   assert.equal(plan.firstRelease?.approved, true, 'The one-time method requires owner approval');
   assert.equal(plan.firstRelease.method, 'local-publish-with-workflow-provenance');
@@ -92,10 +104,7 @@ export async function verifyRelease(directory, expected, tools) {
   assertClient(pin, tools);
   const release = readRelease(directory, expected);
   const require = createRequire(path.join(tools, 'npm/package.json'));
-  // Fulcio's signed extensions bind the proof to the source commit as well as the workflow identity.
-  const verifier = await require('sigstore').createVerifier({ certificateIssuer: signingIssuer, certificateIdentityURI: signingIdentity,
-    certificateOIDs: { '1.3.6.1.4.1.57264.1.11': 'github-hosted', '1.3.6.1.4.1.57264.1.12': `https://github.com/${repository}`,
-      '1.3.6.1.4.1.57264.1.13': expected.commit, '1.3.6.1.4.1.57264.1.14': 'refs/heads/main' } });
+  const verifier = await require('sigstore').createVerifier(certificatePolicy(expected));
   for (const proof of release.proofs) {
     verifier.verify(proof.bundle);
   }

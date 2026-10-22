@@ -3,7 +3,9 @@ import { test } from 'node:test';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { assertPreparationContext, assertStatement, expectedPackages, readRelease } from '../scripts/first-release.mjs';
+import { createRequire } from 'node:module';
+import { root } from '../scripts/pack.mjs';
+import { assertPreparationContext, assertStatement, expectedPackages, readRelease, certificatePolicy, signingIdentity } from '../scripts/first-release.mjs';
 
 const repository = 'SapirAtiya/page-ribbon-dependency-fixes';
 const expected = { commit: 'a'.repeat(40), runId: '12345', attempt: '1' };
@@ -33,6 +35,22 @@ test('signed subjects must identify the exact reviewed package bytes and protect
     const altered = structuredClone(statement); change(altered);
     assert.throws(() => assertStatement(altered, record, expected));
   }
+});
+
+test('certificate fields retain exact DER comparisons and the workflow identity is an anchored literal', () => {
+  const tools = process.env.DEPENDENCY_PUBLISHER_TOOLS || path.join(root, '.artifacts/tools');
+  const require = createRequire(path.join(tools, 'npm/package.json'));
+  const policy = require('./node_modules/sigstore/dist/config.js').createVerificationPolicy(certificatePolicy(expected));
+  const { verifyOIDs, verifySubjectAlternativeName } = require('./node_modules/@sigstore/verify/dist/policy.js');
+  const oid = { id: [1, 3, 6, 1, 4, 1, 57264, 1, 11] };
+  const runnerPolicy = policy.oids.filter(item => item.oid.id.join('.') === oid.id.join('.'));
+  assert.equal(runnerPolicy.length, 1);
+  const certificateValue = Buffer.from('0c0d6769746875622d686f73746564', 'hex');
+  verifyOIDs(runnerPolicy, [{ oid, value: certificateValue }]);
+  assert.throws(() => verifyOIDs([{ oid, value: Buffer.from('github-hosted') }], [{ oid, value: certificateValue }]));
+  assert.throws(() => verifyOIDs(runnerPolicy, [{ oid, value: Buffer.from('0c0b73656c662d686f73746564', 'hex') }]));
+  verifySubjectAlternativeName(policy.subjectAlternativeName, signingIdentity);
+  for (const identity of [signingIdentity + '/other', 'prefix-' + signingIdentity, signingIdentity.replace('github.com', 'githubXcom'), signingIdentity.replace('publish.yml', 'publishXyml')]) assert.throws(() => verifySubjectAlternativeName(policy.subjectAlternativeName, identity));
 });
 
 test('artifact inspection rejects changed bytes, unknown files and an unreviewed run before cryptographic verification', t => {
