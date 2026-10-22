@@ -229,5 +229,78 @@
     "environment": "package-publication",
     "publicIdentityVerified": false,
     "credentialsConfigured": false
+  },
+  "firstRelease": {
+    "approved": true,
+    "approvedOn": "2026-10-22",
+    "method": "local-publish-with-workflow-provenance",
+    "archives": [
+      {
+        "folder": "glob-sync",
+        "name": "@page-and-ribbon/glob-sync",
+        "version": "0.1.4",
+        "archiveName": "page-and-ribbon-glob-sync-0.1.4.tgz",
+        "bundleName": "page-and-ribbon-glob-sync-0.1.4.tgz.sigstore.json",
+        "purl": "pkg:npm/%40page-and-ribbon/glob-sync@0.1.4",
+        "bytes": 5703,
+        "sha256": "55f0f6cfc01def03944b06d463fa7f0b1457fa870aa500034215b2507b0202d3",
+        "sha512": "49a6423b57926ba1a3c572e7a2699cb1aaadf206de5c30e87abfe6c53274ba24b5f91ca4fb1fc37a92a22f42517015c1f1d89d79e173d2a11c6d2867476e43d3"
+      },
+      {
+        "folder": "eslint-plugin-next",
+        "name": "@page-and-ribbon/eslint-plugin-next",
+        "version": "16.2.6-page-ribbon.5",
+        "archiveName": "page-and-ribbon-eslint-plugin-next-16.2.6-page-ribbon.5.tgz",
+        "bundleName": "page-and-ribbon-eslint-plugin-next-16.2.6-page-ribbon.5.tgz.sigstore.json",
+        "purl": "pkg:npm/%40page-and-ribbon/eslint-plugin-next@16.2.6-page-ribbon.5",
+        "bytes": 18400,
+        "sha256": "390db654b641c1dbf3a9a22ed36a71083ed9a8d7873dbd40eee176af96442bea",
+        "sha512": "1313ea40126393e7b177e5678046e7728784ac9b83e2375e22aa689ac0e021935cc80d6488abf6c1732cc7cc5bfee3341eecadd757b48acaa5c14ffe335e897c"
+      },
+      {
+        "folder": "eslint-config-next",
+        "name": "@page-and-ribbon/eslint-config-next",
+        "version": "16.2.6-page-ribbon.5",
+        "archiveName": "page-and-ribbon-eslint-config-next-16.2.6-page-ribbon.5.tgz",
+        "bundleName": "page-and-ribbon-eslint-config-next-16.2.6-page-ribbon.5.tgz.sigstore.json",
+        "purl": "pkg:npm/%40page-and-ribbon/eslint-config-next@16.2.6-page-ribbon.5",
+        "bytes": 4649,
+        "sha256": "7c572a84c8c1edb5f8a3b0bd6ce403623b6271186cc5f156e3a68dc1b7867978",
+        "sha512": "653dd7b25f95c573697f586577ae7485d3da5bdc19d5beca4e6ce74d3555a227422fb6157cc0e2df7370bc92d0c722f474488fba0f11f1c7eba81c217dda9861"
+      },
+      {
+        "folder": "vite-plugin-dynamic-import",
+        "name": "@page-and-ribbon/vite-plugin-dynamic-import",
+        "version": "1.6.0-page-ribbon.5",
+        "archiveName": "page-and-ribbon-vite-plugin-dynamic-import-1.6.0-page-ribbon.5.tgz",
+        "bundleName": "page-and-ribbon-vite-plugin-dynamic-import-1.6.0-page-ribbon.5.tgz.sigstore.json",
+        "purl": "pkg:npm/%40page-and-ribbon/vite-plugin-dynamic-import@1.6.0-page-ribbon.5",
+        "bytes": 11167,
+        "sha256": "d217cad0e53cf100fb8d11a145494bf58fc46db1bce6964a8c47491f4e941d6b",
+        "sha512": "fa1fb5facd618470f37313e9eb26b11a6ffb3a8895d0f4952671314235c49d738ea85a9e4e12fc4e55252e0ab9f7192ea37be5ca3653e44a157d39b8aa8068a7"
+      },
+      {
+        "folder": "cloudflare-vite-plugin",
+        "name": "@page-and-ribbon/cloudflare-vite-plugin",
+        "version": "1.63.0-page-ribbon.undici.1",
+        "archiveName": "page-and-ribbon-cloudflare-vite-plugin-1.63.0-page-ribbon.undici.1.tgz",
+        "bundleName": "page-and-ribbon-cloudflare-vite-plugin-1.63.0-page-ribbon.undici.1.tgz.sigstore.json",
+        "purl": "pkg:npm/%40page-and-ribbon/cloudflare-vite-plugin@1.63.0-page-ribbon.undici.1",
+        "bytes": 2409582,
+        "sha256": "39796433d9c4214ca435e9ba8137950f2e284df2a977c68bcd43b38ba8a430b2",
+        "sha512": "7e7a82f455eb116bdc805cd0f8f4f1476f8c2bc84a928a45a8f989f08574afecaed3a70e3a0da41f31534bdaca757f9be0e81e8a194a444e71d1a56cdbbdc46c"
+      },
+      {
+        "folder": "wrangler",
+        "name": "@page-and-ribbon/wrangler",
+        "version": "4.148.0-page-ribbon.undici.1",
+        "archiveName": "page-and-ribbon-wrangler-4.148.0-page-ribbon.undici.1.tgz",
+        "bundleName": "page-and-ribbon-wrangler-4.148.0-page-ribbon.undici.1.tgz.sigstore.json",
+        "purl": "pkg:npm/%40page-and-ribbon/wrangler@4.148.0-page-ribbon.undici.1",
+        "bytes": 8642566,
+        "sha256": "7504c2f1b1a8825e8cd08f286560d4f05a5707bb0bebe32225aa2f633249b93d",
+        "sha512": "58a844ab1b34c36fe7bd9310a6a3377a7b647f3a188b14c616fd2244e5d04cd03616760c15ce039a4327fffc58b2a9492ca845511bd73e72f524b21cdc2c256a"
+      }
+    ]
   }
 }

@@ -6,6 +6,10 @@ on:
         description: Publish after separate owner approval and verified account setup
         type: boolean
         default: false
+      prepare_first_release:
+        description: Prepare signed proofs for the approved one-time local first publication
+        type: boolean
+        default: false
 permissions:
   contents: read
 env:
@@ -32,9 +36,38 @@ jobs:
       - name: Frozen install, compatibility, privacy, entry points and fresh advisories
         run: node scripts/check.mjs --output=.artifacts/verification
       - name: Publication boundary regression checks
-        run: node --test tests/publisher.mjs
+        run: node --test tests/publisher.mjs tests/first-release.mjs
+        env:
+          DEPENDENCY_PACK_ROOT: .artifacts/verification/packs
       - name: Real publisher dry run with no publishing credentials
         run: node scripts/publisher.mjs --dry-run
+  prepare-first-release:
+    if: inputs.prepare_first_release == true && inputs.publish == false
+    needs: verify
+    environment: package-publication
+    permissions:
+      contents: read
+      id-token: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 24.22.1
+      - name: Assemble the pinned capsule without compiling
+        run: node scripts/bootstrap-publisher.mjs
+      - name: Generate and verify proofs without npm credentials or publication
+        run: node scripts/first-release.mjs --prepare
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+        with:
+          name: first-release-${{ github.sha }}
+          path: .artifacts/first-release/
+          if-no-files-found: error
+          retention-days: 7
+          include-hidden-files: false
   publish:
     if: inputs.publish == true
     needs: verify

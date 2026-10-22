@@ -36,8 +36,8 @@ for (const record of packed) {
   assert.equal(installed.version, record.version);
   assert.ok(!fs.lstatSync(path.join(consumer, 'node_modules', record.importKey)).isSymbolicLink());
 }
-execFileSync(process.execPath, ['--test', path.join(root, 'tests', 'compatibility.mjs'), path.join(root, 'tests', 'privacy.mjs'), path.join(root, 'tests', 'sdk-entrypoints.mjs'), path.join(root, 'tests', 'publisher.mjs')], {
-  cwd: consumer, env: { ...process.env, DEPENDENCY_CONSUMER_ROOT: consumer }, stdio: 'inherit',
+execFileSync(process.execPath, ['--test', path.join(root, 'tests', 'compatibility.mjs'), path.join(root, 'tests', 'privacy.mjs'), path.join(root, 'tests', 'sdk-entrypoints.mjs'), path.join(root, 'tests', 'publisher.mjs'), path.join(root, 'tests', 'first-release.mjs')], {
+  cwd: consumer, env: { ...process.env, DEPENDENCY_CONSUMER_ROOT: consumer, DEPENDENCY_PACK_ROOT: path.join(output, 'packs') }, stdio: 'inherit',
 });
 npm(['audit', '--audit-level=high', '--registry', 'https://registry.npmjs.org'], consumer, { stdio: 'inherit' });
 console.log(JSON.stringify({ functionalChecks: 'passed', output, packageCount: packed.length,
