@@ -1,0 +1,63 @@
+{
+  "name": "@page-and-ribbon/vite-plugin-dynamic-import",
+  "version": "1.6.0-page-ribbon.5",
+  "description": "Explicit Page & Ribbon fork of vite-plugin-dynamic-import; see retained upstream notices and provenance.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./*": "./*"
+  },
+  "author": "草鞋没号 <308487730@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "acorn": "^8.12.1",
+    "es-module-lexer": "^1.5.4",
+    "magic-string": "^0.30.11",
+    "@page-and-ribbon/glob-sync": "0.1.4"
+  },
+  "keywords": [
+    "vite",
+    "plugin",
+    "import",
+    "dynamic"
+  ],
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "UPSTREAM_README.md",
+    "UPSTREAM_README.zh-CN.md"
+  ],
+  "private": false,
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "provenance": true,
+    "tag": "language-fixes"
+  },
+  "upstream": {
+    "name": "vite-plugin-dynamic-import",
+    "version": "1.6.0",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/vite-plugin/vite-plugin-dynamic-import.git"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SapirAtiya/page-ribbon-dependency-fixes.git",
+    "directory": "packages/vite-plugin-dynamic-import"
+  },
+  "homepage": "https://github.com/SapirAtiya/page-ribbon-dependency-fixes",
+  "bugs": {
+    "url": "https://github.com/SapirAtiya/page-ribbon-dependency-fixes/issues"
+  }
+}

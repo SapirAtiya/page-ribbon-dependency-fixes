@@ -1,0 +1,103 @@
+{
+  "name": "@page-and-ribbon/wrangler",
+  "version": "4.148.0-page-ribbon.undici.1",
+  "private": false,
+  "description": "Command-line interface for all things Cloudflare Workers",
+  "keywords": [
+    "assembly",
+    "cli",
+    "cloudflare",
+    "cloudflare workers",
+    "compute",
+    "edge",
+    "emscripten",
+    "graphql",
+    "http",
+    "router",
+    "rust",
+    "serverless",
+    "serverless application",
+    "serverless module",
+    "typescript",
+    "wasm",
+    "web",
+    "webassembly",
+    "workers",
+    "wrangler"
+  ],
+  "homepage": "https://github.com/SapirAtiya/page-ribbon-dependency-fixes",
+  "bugs": {
+    "url": "https://github.com/SapirAtiya/page-ribbon-dependency-fixes/issues"
+  },
+  "license": "MIT OR Apache-2.0",
+  "author": "wrangler@cloudflare.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SapirAtiya/page-ribbon-dependency-fixes.git",
+    "directory": "packages/wrangler"
+  },
+  "bin": {
+    "cf-wrangler": "./bin/cf-wrangler.js",
+    "wrangler": "./bin/wrangler.js",
+    "wrangler2": "./bin/wrangler.js"
+  },
+  "files": [
+    "LICENSE-APACHE",
+    "LICENSE-MIT",
+    "README.md",
+    "THIRD_PARTY_LICENSES.txt",
+    "UNDICI_LICENSE",
+    "UPSTREAM_README.md",
+    "bin",
+    "config-schema.json",
+    "kv-asset-handler.js",
+    "templates",
+    "wrangler-dist"
+  ],
+  "main": "wrangler-dist/cli.js",
+  "types": "wrangler-dist/cli.d.ts",
+  "exports": {
+    ".": {
+      "types": "./wrangler-dist/cli.d.ts",
+      "default": "./wrangler-dist/cli.js"
+    },
+    "./experimental-config": {
+      "types": "./wrangler-dist/experimental-config.d.mts",
+      "import": "./wrangler-dist/experimental-config.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "0.5.0",
+    "@cloudflare/unenv-preset": "2.16.2",
+    "blake3-wasm": "2.1.5",
+    "esbuild": "0.28.1",
+    "miniflare": "5.20261006.0-alpha",
+    "path-to-regexp": "6.3.0",
+    "unenv": "2.0.0-rc.24",
+    "workerd": "1.20261006.1"
+  },
+  "peerDependencies": {
+    "@cloudflare/workers-types": "^5.20261006.1"
+  },
+  "peerDependenciesMeta": {
+    "@cloudflare/workers-types": {
+      "optional": true
+    }
+  },
+  "optionalDependencies": {
+    "fsevents": "2.3.3"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "workers-sdk": {
+    "prerelease": true
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "provenance": true,
+    "tag": "language-fixes"
+  }
+}

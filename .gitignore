@@ -1,0 +1,8 @@
+node_modules/
+.artifacts/
+.env
+.env.*
+.npmrc
+*.log
+!packages/*/dist/
+!packages/*/dist/**

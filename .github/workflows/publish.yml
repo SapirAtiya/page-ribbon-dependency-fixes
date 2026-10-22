@@ -1,0 +1,58 @@
+name: Verify and publish reviewed dependency distributions
+on:
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: Publish after separate owner approval and verified account setup
+        type: boolean
+        default: false
+permissions:
+  contents: read
+env:
+  DO_NOT_TRACK: '1'
+  WRANGLER_SEND_METRICS: 'false'
+  TURBO_TELEMETRY_DISABLED: '1'
+  NPM_CONFIG_UPDATE_NOTIFIER: 'false'
+jobs:
+  verify:
+    if: github.repository == 'SapirAtiya/page-ribbon-dependency-fixes' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 24.22.1
+      - name: Assemble pinned tool archives without compiling or globally installing
+        run: node scripts/bootstrap-publisher.mjs
+      - name: Select isolated npm for the unchanged checks
+        run: echo "$GITHUB_WORKSPACE/.artifacts/tools/bin" >> "$GITHUB_PATH"
+      - name: Frozen install, compatibility, privacy, entry points and fresh advisories
+        run: node scripts/check.mjs --output=.artifacts/verification
+      - name: Publication boundary regression checks
+        run: node --test tests/publisher.mjs
+      - name: Real publisher dry run with no publishing credentials
+        run: node scripts/publisher.mjs --dry-run
+  publish:
+    if: inputs.publish == true
+    needs: verify
+    environment: package-publication
+    permissions:
+      contents: read
+      id-token: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 24.22.1
+      - name: Assemble the same pinned tool capsule
+        run: node scripts/bootstrap-publisher.mjs
+      - run: echo "$GITHUB_WORKSPACE/.artifacts/tools/bin" >> "$GITHUB_PATH"
+      - name: Publish reviewed archives with OIDC and provenance only after all holds are cleared
+        run: node scripts/publisher.mjs --publish

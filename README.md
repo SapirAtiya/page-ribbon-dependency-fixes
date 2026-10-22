@@ -1,0 +1,13 @@
+# Page & Ribbon dependency distributions
+
+Six independent, scoped dependency forks. This is a local review snapshot with public package metadata prepared and publishingEnabled:false in both reviewed plans. The repository root remains private. Scope/account ownership, public identity and real first-publication authentication are unverified. Nothing here authorizes publication. The application and its private history are excluded.
+
+This is a distribution-source repository: readable prebuilt JavaScript, declarations and complete source maps, licenses, upstream source pointers/patch and generic compatibility checks. It does not claim to rebuild the upstream SDK or Node. See UPSTREAM.json and docs/SDK_PREPARATION.md.
+
+Use Node 24.22.1 or a separately verified newer runtime. scripts/pack.mjs creates archives with lifecycle scripts disabled and checks the exact package allowlists/hashes. scripts/check.mjs retains frozen-install, real consumer compatibility and advisory checks; its advisory request sends dependency metadata and requires separate network/upload authorization. Unpublished packages cannot yet pass complete registry signatures/provenance or actual registry-alias transport checks. The application's complete release gates remain unchanged and required.
+
+Only this directory is proposed public content. No private .git history, app, credentials, internal logs or local rollback checkpoint belongs in it. The manually triggered workflow is guarded by explicit approval/ownership/authentication holds and a separate package-publication environment. It has no push/release trigger and cannot publish while these holds are false. The older inactive example is retained under docs/.
+
+PUBLISHER.json pins the authenticated pnpm 11.28.7 and npm 12.2.0 archives. Bootstrap assembles an isolated maintenance copy of npm with the exact Undici 6.29.1 distribution already authenticated inside the pnpm archive; every other npm byte remains unchanged. This is a reviewed local dependency replacement, not an official unmodified npm distribution, global installation or compiler build. The same client runs the unchanged npm advisory checks; native pnpm publishing does not delegate to the installed npm. Original tool licenses remain in the isolated capsule. No seventh package is published.
+
+The publisher supports a credential-free --dry-run. Real publication requires separately verified account ownership and first-publication authentication, the exact repository/main/workflow identity, OIDC and a clean reviewed commit. Existing/new-name bootstrap authentication is still an external prerequisite; the local dry run does not establish it. Provenance stays enabled. Never mark the authentication hold verified merely to bypass initial registry setup.

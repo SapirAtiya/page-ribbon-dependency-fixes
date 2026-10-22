@@ -1,0 +1,44 @@
+{
+  "name": "@page-and-ribbon/eslint-plugin-next",
+  "version": "16.2.6-page-ribbon.5",
+  "description": "Explicit Page & Ribbon fork of @next/eslint-plugin-next; see retained upstream notices and provenance.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "UPSTREAM_README.md"
+  ],
+  "dependencies": {
+    "@page-and-ribbon/glob-sync": "0.1.4"
+  },
+  "private": false,
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "provenance": true,
+    "tag": "language-fixes"
+  },
+  "upstream": {
+    "name": "@next/eslint-plugin-next",
+    "version": "16.2.6",
+    "repository": {
+      "url": "vercel/next.js",
+      "directory": "packages/eslint-plugin-next"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SapirAtiya/page-ribbon-dependency-fixes.git",
+    "directory": "packages/eslint-plugin-next"
+  },
+  "homepage": "https://github.com/SapirAtiya/page-ribbon-dependency-fixes",
+  "bugs": {
+    "url": "https://github.com/SapirAtiya/page-ribbon-dependency-fixes/issues"
+  }
+}

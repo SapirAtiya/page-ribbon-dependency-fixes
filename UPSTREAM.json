@@ -1,0 +1,447 @@
+{
+  "schemaVersion": 1,
+  "packages": [
+    {
+      "name": "@page-and-ribbon/glob-sync",
+      "version": "0.1.4",
+      "upstream": {
+        "name": "owned adapter",
+        "version": "0.1.4"
+      },
+      "files": {
+        "FAST_GLOB_LICENSE": "9363d160bf41d46d83901a5d24fc3fe2094c2afc17b4a2378914b273977ee2de",
+        "LICENSE": "d39d8495f461912dacab0ed2e617f94eaace3ffd047f07823765be76ab70bf8f",
+        "README.md": "aff8365fa6b0b488a2168a228825314548ed9f43035dc4c0580ae05f85abfe4f",
+        "braces.mjs": "70bc416ff6b1fb736d0333fdd8592e5674562c3515e214c3c81fe0847d60f9fe",
+        "index.mjs": "ce3b4877126cebf8fbccc94be6d1ea5029d0e887511f26db2c35e1c1fec22471",
+        "package.json": "da207e4c8b177388da4e68bd3e081a3e7a3d0e773e73567fae1c21250aa8776b"
+      },
+      "changedOrAddedPaths": [
+        "FAST_GLOB_LICENSE",
+        "LICENSE",
+        "README.md",
+        "braces.mjs",
+        "index.mjs",
+        "package.json"
+      ]
+    },
+    {
+      "name": "@page-and-ribbon/eslint-plugin-next",
+      "version": "16.2.6-page-ribbon.5",
+      "upstream": {
+        "name": "@next/eslint-plugin-next",
+        "version": "16.2.6",
+        "archive": "https://registry.npmjs.org/@next/eslint-plugin-next/-/eslint-plugin-next-16.2.6.tgz",
+        "integrity": "sha512-Z8l6o4JWKUl755x4R+wogD86KPeU+Ckw4K+SYG4kHeOJtRenDeK+OSbGcqZpDtbwn9DsJVdir2UxmwXuinUbUw==",
+        "originalFiles": {
+          "dist/index.d.ts": "b6c7c1db51d3db13ebe1d2a4c31a5fe7ff6017e2be4fa260ed82edbb6f70d96b",
+          "dist/index.js": "f4afcfef11272ff83f88edaddfbc7471e82c1067498976c693fe224869fee068",
+          "dist/rules/google-font-display.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+          "dist/rules/google-font-display.js": "4fd8cd476fae6e37f75ae54e46feee561040a04b01d9c73cab37b778e586f6cd",
+          "dist/rules/google-font-preconnect.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+          "dist/rules/google-font-preconnect.js": "7097aedd951e8909265c716323ade6d0887f4b54152774d7cfe3059812ced4d2",
+          "dist/rules/inline-script-id.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+          "dist/rules/inline-script-id.js": "fe7cc4883e52ae135e44eb3d2788b6a54eca0a11b559ff0636b51fcae550b69a",
+          "dist/rules/next-script-for-ga.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+          "dist/rules/next-script-for-ga.js": "a1d40c2b48d252f43b4f739d628748a50e4902b8b2f667d7cedb726689055149",
+          "dist/rules/no-assign-module-variable.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+          "dist/rules/no-assign-module-variable.js": "131993a0f769199a4e1fbcc006a5e798ef5234d344b89146a347cf9ba9703c64",
+          "dist/rules/no-async-client-component.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+          "dist/rules/no-async-client-component.js": "eb8252488bd89335d79c45d53872918f70bb03a98b87f633317a2b13ae294a1f",
+          "dist/rules/no-before-interactive-script-outside-document.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+          "dist/rules/no-before-interactive-script-outside-document.js": "b4606784338583e745f50a32da212034be6599513180e6d77ce6295c92d38d3c",
+          "dist/rules/no-css-tags.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+          "dist/rules/no-css-tags.js": "3ecea24c00cf779b1ce80cdd1176e3a21a4369bac16e2f48c1ec0ccaa8200568",
+          "dist/rules/no-document-import-in-page.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+          "dist/rules/no-document-import-in-page.js": "aa6622bc04ccc1d7e0289b42cedb5b10b70800d4ad9caa1165a4ce0c9ee2fc00",
+          "dist/rules/no-duplicate-head.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+          "dist/rules/no-duplicate-head.js": "2f3fe9b461c45f144e606ab989b409117af0e163edd2c9858d84cbf29426254c",
+          "dist/rules/no-head-element.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+          "dist/rules/no-head-element.js": "ce985a88bb226e3688c90c47da71d2c0ce0797d27d1b112d5e8e4f02b3e25a67",
+          "dist/rules/no-head-import-in-document.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+          "dist/rules/no-head-import-in-document.js": "64c3f1ecbab2a468641f85a2c4b1d746c316c2ba390f6780cc8882c456dd0bd4",
+          "dist/rules/no-html-link-for-pages.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+          "dist/rules/no-html-link-for-pages.js": "3b184e28aa8997eb8e7f7b43c8da327fd3e2a2acf826e6e328632e7006687baa",
+          "dist/rules/no-img-element.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+          "dist/rules/no-img-element.js": "e2945047059e846e58d67090de882821a4c39129acb1d51bea80eb955964dc5f",
+          "dist/rules/no-page-custom-font.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+          "dist/rules/no-page-custom-font.js": "e7b6b5dc6834b9eef90e72f024bdf0b1795a2ecfdc3fb37a8a3954556457a346",
+          "dist/rules/no-script-component-in-head.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+          "dist/rules/no-script-component-in-head.js": "2569a771e8a932ef566bccb49f2f31bd22f22e12bf8b282eca04f35821f4471f",
+          "dist/rules/no-styled-jsx-in-document.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+          "dist/rules/no-styled-jsx-in-document.js": "dc5ce51b254c4d28a34e2b2b103fb54601e7836d88c5909b2874710e443a906d",
+          "dist/rules/no-sync-scripts.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+          "dist/rules/no-sync-scripts.js": "d4b0d7c74cce675107755e5ccf7f02f6c1493cd80296c7eb483ace5f6bab53b0",
+          "dist/rules/no-title-in-document-head.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+          "dist/rules/no-title-in-document-head.js": "32a809a59b6ea3cb86eb603ccfb36835f2396720ba1553de543271e7e4b2aeca",
+          "dist/rules/no-typos.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+          "dist/rules/no-typos.js": "8e3faf5e72a97234579adcbecf2773082ea38ecc21188d261c2e6db9cdd95d85",
+          "dist/rules/no-unwanted-polyfillio.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+          "dist/rules/no-unwanted-polyfillio.js": "84d1fe31dc0fba0fd1139b5adcaa9579dd31b33ab35f32faecc5a529edd773ab",
+          "dist/utils/define-rule.d.ts": "850d96a4136c9ff820fc16dcedfde9673e6cf8f8a6711994667e0af561bf9d4e",
+          "dist/utils/define-rule.js": "2d490d33f3a9db380fa01452091cb1daf81dbbf0e09fbc4eefdbc379f6aba633",
+          "dist/utils/get-root-dirs.d.ts": "ae8febcc67870c017aaf03205096c9c7c622c0a96fe3aa3a85e56968d86ba98f",
+          "dist/utils/get-root-dirs.js": "886677432990a735e5ebdfb345ff1cbd40e264f9947a8432eeeb254b3a926bde",
+          "dist/utils/node-attributes.d.ts": "9850a9cfd0844f488591435b87dd7cbf26cd9fc7352621a7b8cae1e89115e29a",
+          "dist/utils/node-attributes.js": "48fd96af82f72bd5ac5fd6e459a60768638d4f4fcd44b222f128c39e7336997a",
+          "dist/utils/url.d.ts": "cbdebf9a868e60d324fafd69404c39cced9f86727b211878989931ca7c91efe5",
+          "dist/utils/url.js": "219194728597d02d8f7cecafd14d91e681c99f9fa169e5b7577bdf866993ef5a",
+          "package.json": "1cf80a11fcaf678a33a75ee4fccb734f2ffa8bc67f5142591ec46fb98a515e69",
+          "README.md": "676f78a4be309f5b9d88726a02b86318a94273f73041550ada1401176622054f"
+        }
+      },
+      "files": {
+        "LICENSE": "ee765244e2d59f5234d474f62e0766fa0c8b99af967fdd4c0cb8dcb0c76ea224",
+        "README.md": "e77f5fd734e0c194eb85acd4882390bfa4da30983dc4b4cee9135a09b79e6031",
+        "UPSTREAM_README.md": "676f78a4be309f5b9d88726a02b86318a94273f73041550ada1401176622054f",
+        "dist/index.d.ts": "b6c7c1db51d3db13ebe1d2a4c31a5fe7ff6017e2be4fa260ed82edbb6f70d96b",
+        "dist/index.js": "f4afcfef11272ff83f88edaddfbc7471e82c1067498976c693fe224869fee068",
+        "dist/rules/google-font-display.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+        "dist/rules/google-font-display.js": "4fd8cd476fae6e37f75ae54e46feee561040a04b01d9c73cab37b778e586f6cd",
+        "dist/rules/google-font-preconnect.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+        "dist/rules/google-font-preconnect.js": "7097aedd951e8909265c716323ade6d0887f4b54152774d7cfe3059812ced4d2",
+        "dist/rules/inline-script-id.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+        "dist/rules/inline-script-id.js": "fe7cc4883e52ae135e44eb3d2788b6a54eca0a11b559ff0636b51fcae550b69a",
+        "dist/rules/next-script-for-ga.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+        "dist/rules/next-script-for-ga.js": "a1d40c2b48d252f43b4f739d628748a50e4902b8b2f667d7cedb726689055149",
+        "dist/rules/no-assign-module-variable.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+        "dist/rules/no-assign-module-variable.js": "131993a0f769199a4e1fbcc006a5e798ef5234d344b89146a347cf9ba9703c64",
+        "dist/rules/no-async-client-component.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+        "dist/rules/no-async-client-component.js": "eb8252488bd89335d79c45d53872918f70bb03a98b87f633317a2b13ae294a1f",
+        "dist/rules/no-before-interactive-script-outside-document.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+        "dist/rules/no-before-interactive-script-outside-document.js": "b4606784338583e745f50a32da212034be6599513180e6d77ce6295c92d38d3c",
+        "dist/rules/no-css-tags.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+        "dist/rules/no-css-tags.js": "3ecea24c00cf779b1ce80cdd1176e3a21a4369bac16e2f48c1ec0ccaa8200568",
+        "dist/rules/no-document-import-in-page.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+        "dist/rules/no-document-import-in-page.js": "aa6622bc04ccc1d7e0289b42cedb5b10b70800d4ad9caa1165a4ce0c9ee2fc00",
+        "dist/rules/no-duplicate-head.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+        "dist/rules/no-duplicate-head.js": "2f3fe9b461c45f144e606ab989b409117af0e163edd2c9858d84cbf29426254c",
+        "dist/rules/no-head-element.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+        "dist/rules/no-head-element.js": "ce985a88bb226e3688c90c47da71d2c0ce0797d27d1b112d5e8e4f02b3e25a67",
+        "dist/rules/no-head-import-in-document.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+        "dist/rules/no-head-import-in-document.js": "64c3f1ecbab2a468641f85a2c4b1d746c316c2ba390f6780cc8882c456dd0bd4",
+        "dist/rules/no-html-link-for-pages.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+        "dist/rules/no-html-link-for-pages.js": "3b184e28aa8997eb8e7f7b43c8da327fd3e2a2acf826e6e328632e7006687baa",
+        "dist/rules/no-img-element.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+        "dist/rules/no-img-element.js": "e2945047059e846e58d67090de882821a4c39129acb1d51bea80eb955964dc5f",
+        "dist/rules/no-page-custom-font.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+        "dist/rules/no-page-custom-font.js": "e7b6b5dc6834b9eef90e72f024bdf0b1795a2ecfdc3fb37a8a3954556457a346",
+        "dist/rules/no-script-component-in-head.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+        "dist/rules/no-script-component-in-head.js": "2569a771e8a932ef566bccb49f2f31bd22f22e12bf8b282eca04f35821f4471f",
+        "dist/rules/no-styled-jsx-in-document.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+        "dist/rules/no-styled-jsx-in-document.js": "dc5ce51b254c4d28a34e2b2b103fb54601e7836d88c5909b2874710e443a906d",
+        "dist/rules/no-sync-scripts.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+        "dist/rules/no-sync-scripts.js": "d4b0d7c74cce675107755e5ccf7f02f6c1493cd80296c7eb483ace5f6bab53b0",
+        "dist/rules/no-title-in-document-head.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+        "dist/rules/no-title-in-document-head.js": "32a809a59b6ea3cb86eb603ccfb36835f2396720ba1553de543271e7e4b2aeca",
+        "dist/rules/no-typos.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+        "dist/rules/no-typos.js": "8e3faf5e72a97234579adcbecf2773082ea38ecc21188d261c2e6db9cdd95d85",
+        "dist/rules/no-unwanted-polyfillio.d.ts": "15e0d2ae63598741afe0503dfaca085552936706417285cd2c4d56c5bb71f25b",
+        "dist/rules/no-unwanted-polyfillio.js": "84d1fe31dc0fba0fd1139b5adcaa9579dd31b33ab35f32faecc5a529edd773ab",
+        "dist/utils/define-rule.d.ts": "850d96a4136c9ff820fc16dcedfde9673e6cf8f8a6711994667e0af561bf9d4e",
+        "dist/utils/define-rule.js": "2d490d33f3a9db380fa01452091cb1daf81dbbf0e09fbc4eefdbc379f6aba633",
+        "dist/utils/get-root-dirs.d.ts": "ae8febcc67870c017aaf03205096c9c7c622c0a96fe3aa3a85e56968d86ba98f",
+        "dist/utils/get-root-dirs.js": "a3915808f6678757a5ecf4ea4c7b83358cae00d0c73a9a284ba69ea7faa7e493",
+        "dist/utils/node-attributes.d.ts": "9850a9cfd0844f488591435b87dd7cbf26cd9fc7352621a7b8cae1e89115e29a",
+        "dist/utils/node-attributes.js": "48fd96af82f72bd5ac5fd6e459a60768638d4f4fcd44b222f128c39e7336997a",
+        "dist/utils/url.d.ts": "cbdebf9a868e60d324fafd69404c39cced9f86727b211878989931ca7c91efe5",
+        "dist/utils/url.js": "219194728597d02d8f7cecafd14d91e681c99f9fa169e5b7577bdf866993ef5a",
+        "package.json": "50aa83ae964c3f89483579f4fd3270563c45db04c88e3a48b081d47714cbf4f5"
+      },
+      "changedOrAddedPaths": [
+        "LICENSE",
+        "README.md",
+        "UPSTREAM_README.md",
+        "dist/utils/get-root-dirs.js",
+        "package.json"
+      ]
+    },
+    {
+      "name": "@page-and-ribbon/eslint-config-next",
+      "version": "16.2.6-page-ribbon.5",
+      "upstream": {
+        "name": "eslint-config-next",
+        "version": "16.2.6",
+        "archive": "https://registry.npmjs.org/eslint-config-next/-/eslint-config-next-16.2.6.tgz",
+        "integrity": "sha512-z2ELYSkyrrJ6cuunTU8vhsT/RpouPkjaSah06nVW6Rg2Hpg0Vs8s497/e5s8G8qtdp4ccsiovz5P1rv+5VSW2Q==",
+        "originalFiles": {
+          "dist/core-web-vitals.d.ts": "1e36d150c6ffb15c8817050f6992fea733a342e7a36ba43d45ee0be27a0a7e97",
+          "dist/core-web-vitals.js": "c50f0df37eff59ea77f29060bb104a789c0e776d610aff2ceaeb0b83fcf0a27e",
+          "dist/index.d.ts": "1e36d150c6ffb15c8817050f6992fea733a342e7a36ba43d45ee0be27a0a7e97",
+          "dist/index.js": "b74a083bb67a558c32b5dba2925d1d2cbf806a11b5a034af17962d74d38a435d",
+          "dist/parser.d.ts": "6ae17df9cb004f10999fdc8b8d7f66b99541ff991e6f7f014b978e86e1c0e318",
+          "dist/parser.js": "bf9861fcd2318c860f1aeaef6cd0e5af3922213fe95429eadab607acb56a89db",
+          "dist/typescript.d.ts": "1e36d150c6ffb15c8817050f6992fea733a342e7a36ba43d45ee0be27a0a7e97",
+          "dist/typescript.js": "2ef66aece60b064a2111e1015d1ceddfc4503e3178cd9af49bf5043c821cf70e",
+          "package.json": "e4cf52bf4ceb5edaf632542795dde3bcdcec5bb17108477b77cf607af270b2b2"
+        }
+      },
+      "files": {
+        "LICENSE": "ee765244e2d59f5234d474f62e0766fa0c8b99af967fdd4c0cb8dcb0c76ea224",
+        "README.md": "07918562d7281231b14c4629fc7dcfc8389f83331d6d0d8831f0c2f1662fd1c4",
+        "dist/core-web-vitals.d.ts": "1e36d150c6ffb15c8817050f6992fea733a342e7a36ba43d45ee0be27a0a7e97",
+        "dist/core-web-vitals.js": "c50f0df37eff59ea77f29060bb104a789c0e776d610aff2ceaeb0b83fcf0a27e",
+        "dist/index.d.ts": "1e36d150c6ffb15c8817050f6992fea733a342e7a36ba43d45ee0be27a0a7e97",
+        "dist/index.js": "b74a083bb67a558c32b5dba2925d1d2cbf806a11b5a034af17962d74d38a435d",
+        "dist/parser.d.ts": "6ae17df9cb004f10999fdc8b8d7f66b99541ff991e6f7f014b978e86e1c0e318",
+        "dist/parser.js": "3b4ec29aabbd7d3993fcc29855898d89a6f03a94882190ee2eb33d4b33ecc719",
+        "dist/typescript.d.ts": "1e36d150c6ffb15c8817050f6992fea733a342e7a36ba43d45ee0be27a0a7e97",
+        "dist/typescript.js": "2ef66aece60b064a2111e1015d1ceddfc4503e3178cd9af49bf5043c821cf70e",
+        "package.json": "b6cac13fbe8525ae88ddc6196788582be644e910fe77927575fc68b2f1fefe41"
+      },
+      "changedOrAddedPaths": [
+        "LICENSE",
+        "README.md",
+        "dist/parser.js",
+        "package.json"
+      ]
+    },
+    {
+      "name": "@page-and-ribbon/vite-plugin-dynamic-import",
+      "version": "1.6.0-page-ribbon.5",
+      "upstream": {
+        "name": "vite-plugin-dynamic-import",
+        "version": "1.6.0",
+        "archive": "https://registry.npmjs.org/vite-plugin-dynamic-import/-/vite-plugin-dynamic-import-1.6.0.tgz",
+        "integrity": "sha512-TM0sz70wfzTIo9YCxVFwS8OA9lNREsh+0vMHGSkWDTZ7bgd1Yjs5RV8EgB634l/91IsXJReg0xtmuQqP0mf+rg==",
+        "originalFiles": {
+          "dist/dynamic-import-to-glob.d.ts": "ea6442407b0f73a006b330239c9288f339cb28167a1ebfdfd901cb710519173c",
+          "dist/index.d.ts": "e611a6cc5789363832c9f70e44ab27af5dac91e6f15173e57bd66d32296607b4",
+          "dist/index.js": "b1e802a8aaeb2bb7d14ccf39529c42740101ab3977d7a7e70638d19ef0c3301a",
+          "dist/index.mjs": "fb73e06eaba3e63e7dd5bf8ca1c41d7263dcada411924b3d383a16ebf2c140e8",
+          "dist/resolve.d.ts": "9dc9844397011c68b0e207baf1fbba2fafd91455b7f43c8e8a03530930d1f1e0",
+          "dist/types.d.ts": "5d303afe2aaf7e67cda351c4763439b338da965301c71f74fa6246d6e092d712",
+          "dist/utils.d.ts": "b3215962e2a7b70c5f15d1aa8362cd8bbca2688b2e759ca2c9ad45ef494b4ff5",
+          "LICENSE": "4daa59a496ede97b6616b7e71724160c7a61b8945c7b17413b37e747fe6bbfce",
+          "package.json": "d06ccdc49f83c42301878ccb5aa8e2c8df9224e8ee7d2e0eb2af0ea64edb3a9e",
+          "README.md": "b08220aa9f249cbcdc9360e7e8c0375fa3555e859d77963a5bb40349781cd540",
+          "README.zh-CN.md": "ac4b859b93a6e4d7ad93cb781390fff495216411b03bedae664c82ce6985b5a7"
+        }
+      },
+      "files": {
+        "LICENSE": "4daa59a496ede97b6616b7e71724160c7a61b8945c7b17413b37e747fe6bbfce",
+        "README.md": "3ddd939ab4a1449a2f6171d8d668cb701cae99e9bd5eb3597b339f35973c0d7f",
+        "UPSTREAM_README.md": "b08220aa9f249cbcdc9360e7e8c0375fa3555e859d77963a5bb40349781cd540",
+        "UPSTREAM_README.zh-CN.md": "ac4b859b93a6e4d7ad93cb781390fff495216411b03bedae664c82ce6985b5a7",
+        "dist/dynamic-import-to-glob.d.ts": "ea6442407b0f73a006b330239c9288f339cb28167a1ebfdfd901cb710519173c",
+        "dist/index.d.ts": "e611a6cc5789363832c9f70e44ab27af5dac91e6f15173e57bd66d32296607b4",
+        "dist/index.js": "577a7a61db30059f7ba520aa3784478b044afaec90e729011e7e8a5fabc23e9f",
+        "dist/index.mjs": "8b851b86fd7f9b5b235854286e6aa3baddedb0361d26a21c9d4040e83139be66",
+        "dist/resolve.d.ts": "9dc9844397011c68b0e207baf1fbba2fafd91455b7f43c8e8a03530930d1f1e0",
+        "dist/types.d.ts": "5d303afe2aaf7e67cda351c4763439b338da965301c71f74fa6246d6e092d712",
+        "dist/utils.d.ts": "b3215962e2a7b70c5f15d1aa8362cd8bbca2688b2e759ca2c9ad45ef494b4ff5",
+        "package.json": "bd43766bba7468abb84d598b686cdb70b46b8d35eb5b8a632278f7479bca358f"
+      },
+      "changedOrAddedPaths": [
+        "README.md",
+        "UPSTREAM_README.md",
+        "UPSTREAM_README.zh-CN.md",
+        "dist/index.js",
+        "dist/index.mjs",
+        "package.json"
+      ]
+    },
+    {
+      "name": "@page-and-ribbon/cloudflare-vite-plugin",
+      "version": "1.63.0-page-ribbon.undici.1",
+      "upstream": {
+        "name": "@cloudflare/vite-plugin",
+        "version": "1.63.0+page-ribbon.undici.1",
+        "sdkCommit": "540f0844667abacb36dee94c078d403192bab1bd",
+        "undiciVersion": "7.30.1",
+        "undiciCommit": "7507102a675b082a71437f0a00681e537875556c",
+        "inputArchiveSha256": "83810ea68a258cb56d9652cedabf880fe7eab07d73d6fcee7a9764639ba51bf8"
+      },
+      "distributionOnly": true,
+      "changes": [
+        {
+          "package": "@page-and-ribbon/cloudflare-vite-plugin",
+          "path": "dist/workers/asset-worker/index.js",
+          "beforeSha256": "94182561c66618e4c6baef376bd99d99a5dcdf0b2536425f7c8e667d313c12b2",
+          "replacements": 56,
+          "proof": {
+            "tokensPreserved": true,
+            "moduleLabels": 0,
+            "functionLabels": 0,
+            "embeddedWorkers": 0
+          }
+        },
+        {
+          "package": "@page-and-ribbon/cloudflare-vite-plugin",
+          "path": "dist/workers/router-worker/index.js",
+          "beforeSha256": "ddc9378e1f08ee0a7430a7abe63fbdd750a44bdaba550e58c7dcd09c2e014144",
+          "replacements": 56,
+          "proof": {
+            "tokensPreserved": true,
+            "moduleLabels": 0,
+            "functionLabels": 0,
+            "embeddedWorkers": 0
+          }
+        },
+        {
+          "package": "@page-and-ribbon/cloudflare-vite-plugin",
+          "path": "dist/workers/runner-worker/module-runner-legacy.js",
+          "beforeSha256": "5d3436d465124790d5c01ff78f2ed07a4eccce1ff14418da822030d653c65e7d",
+          "replacements": 1,
+          "proof": {
+            "tokensPreserved": true,
+            "moduleLabels": 0,
+            "functionLabels": 0,
+            "embeddedWorkers": 0
+          }
+        },
+        {
+          "package": "@page-and-ribbon/cloudflare-vite-plugin",
+          "path": "dist/workers/runner-worker/module-runner.js",
+          "beforeSha256": "cd1398135fe8038cc8e0e564ec6a052e70df7a860135ee5a40efa3e3641be8ff",
+          "replacements": 1,
+          "proof": {
+            "tokensPreserved": true,
+            "moduleLabels": 0,
+            "functionLabels": 0,
+            "embeddedWorkers": 0
+          }
+        },
+        {
+          "package": "@page-and-ribbon/cloudflare-vite-plugin",
+          "path": "dist/index.mjs.map",
+          "beforeSha256": "da241db416e9b5184edd07f81722de9c06b829a19db8ff441c9e4275efa35f56",
+          "replacements": 435,
+          "proof": {
+            "mappingsUnchanged": true,
+            "sourceEntriesUnchanged": true,
+            "embeddedEntriesUnchanged": true
+          }
+        },
+        {
+          "package": "@page-and-ribbon/cloudflare-vite-plugin",
+          "path": "dist/open-BXSXGDZI-Q3qcRg12.mjs.map",
+          "beforeSha256": "ba9340c418281a6cf3111adf607d52238367babd25f1a3df36d69d9337f61264",
+          "replacements": 8,
+          "proof": {
+            "mappingsUnchanged": true,
+            "sourceEntriesUnchanged": true,
+            "embeddedEntriesUnchanged": true
+          }
+        },
+        {
+          "package": "@page-and-ribbon/cloudflare-vite-plugin",
+          "path": "dist/index.mjs",
+          "beforeSha256": "cfa6c85821a3b44065a912a9dad673426a64df391e99550ba8fb14c71681bc0b",
+          "replacements": 457,
+          "proof": {
+            "tokensPreserved": true,
+            "moduleLabels": 209,
+            "functionLabels": 0,
+            "embeddedWorkers": 1
+          }
+        }
+      ],
+      "files": {
+        "LICENSE-APACHE": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+        "LICENSE-MIT": "9bb3b077cc8628334bab25961223dd8207252c8a56aa054195be38f1c042aaf4",
+        "README.md": "e298ef813661efc743601cc3415b0857ecc79b373cf3306e60d6cf761011eabb",
+        "THIRD_PARTY_LICENSES.txt": "33e88952807f814b2fee75f90e4b0883c2e51dd39091cd655e0643f9f9d39dd7",
+        "UNDICI_LICENSE": "a6db8096b2707bc0102d256917d4d33f298ba36d8c3f25de067a2b5bb379db27",
+        "UPSTREAM_README.md": "273c63083a741ea3cbac466092d3400a987a2c9e68a0065d955c9993b15452a6",
+        "bin/cf-vite": "6b2e28b065959a6372984e71946199cb43386cb89aa3a70895124ecafcfa0807",
+        "dist/cf-vite.mjs": "791a8d208e4ecbb4bce36d2181f51b29ffd38c367aec911805d1148093a052c4",
+        "dist/chunk-53YJWLG7-dSmyuxCA.mjs": "d3dc8391304fbf0a7afc621a994aae4c2481391ee134c884fa5ee2b689c6a516",
+        "dist/chunk-53YJWLG7-dSmyuxCA.mjs.map": "e5fdd7239286d7211a5dc64f1a39ba053d87f89e6ee7d90f11035ce38d29a648",
+        "dist/index.d.mts": "14a335650a78cfd36d7d187ad809cc90011d1d21d1a6008b8bb1096e653b088a",
+        "dist/index.d.mts.map": "615c65fab739a17087b65e19b795a026e68430e83d482b6f9301b536b27113d4",
+        "dist/index.mjs": "bdb80ae1112fe6b0aff3e5f689b96ed18927b83b153c095ea1a45fa215f053ed",
+        "dist/index.mjs.map": "16a790b50f96c129e1342aa537db093fe1222f68bbd457b8116453f1d79c8456",
+        "dist/open-BXSXGDZI-Q3qcRg12.mjs": "3b430b7382a70c862b71dc021f7ac68a1961b0d86b088b368eeeeba97a9e9b2c",
+        "dist/open-BXSXGDZI-Q3qcRg12.mjs.map": "3202375d4493031ff874dec9afb810cab145aa0a4fb22a6537ec4501743a0883",
+        "dist/package-OsCRBfqA.mjs": "da4866d04731a547460fab179d05f1ab68e95e353b5b9161181651b913e6cecc",
+        "dist/package-OsCRBfqA.mjs.map": "b82ed6539c959088b90106bfd344073ebfe9af192b9f7b23bc18afb308535a30",
+        "dist/workers/asset-worker/index.js": "fc292da106f5a16bb96bd02d7c5130eaa203f8a868077f312235a833d5e25815",
+        "dist/workers/router-worker/index.js": "5962a873e9740d69d14c7e6a3519f01099c4bccd37c542318faa8873470a46bf",
+        "dist/workers/runner-worker/index.js": "06bf40065438a8fa39af0c06743ca92ea8d4be7c2e954af3dd21fc6e220994d1",
+        "dist/workers/runner-worker/module-runner-legacy.js": "9e94263030b6ea7b658923c642f9c304ffc001c9532a9e9cf145a6c32d18816a",
+        "dist/workers/runner-worker/module-runner.js": "6327b4655dc60209862478645782b01d4abb81032789e8ef7a08039e1e95517c",
+        "dist/workers/vite-proxy-worker/index.js": "126d68d4665c28d88a25e44d240d3f770b7b58f5085981eb33dbe5fb77114019",
+        "package.json": "05c62b122bf2562881488e9ae3c08163b9775e5b3ac7984f3ad919125d993aca"
+      }
+    },
+    {
+      "name": "@page-and-ribbon/wrangler",
+      "version": "4.148.0-page-ribbon.undici.1",
+      "upstream": {
+        "name": "wrangler",
+        "version": "4.148.0+page-ribbon.undici.1",
+        "sdkCommit": "540f0844667abacb36dee94c078d403192bab1bd",
+        "undiciVersion": "7.30.1",
+        "undiciCommit": "7507102a675b082a71437f0a00681e537875556c",
+        "inputArchiveSha256": "a74c6581aceda4b2edf3fbf02dd2ca252c634b35d3feac73bb5ed02499d6458c"
+      },
+      "distributionOnly": true,
+      "changes": [
+        {
+          "package": "@page-and-ribbon/wrangler",
+          "path": "wrangler-dist/cli.js",
+          "beforeSha256": "eb27e0fe3931dbf803cc003605ced87994fa4c6777820fb4eda9e8edcaeed6c3",
+          "replacements": 5720,
+          "proof": {
+            "tokensPreserved": true,
+            "moduleLabels": 2915,
+            "functionLabels": 1,
+            "embeddedWorkers": 1
+          }
+        },
+        {
+          "package": "@page-and-ribbon/wrangler",
+          "path": "wrangler-dist/cli.js.map",
+          "beforeSha256": "b5bc3fdc4420cc731e36ea545de6c98a3b101bedb4bab4e8d9375cb7439a94eb",
+          "replacements": 3010,
+          "proof": {
+            "mappingsUnchanged": true,
+            "sourceEntriesUnchanged": true,
+            "embeddedEntriesUnchanged": true
+          }
+        }
+      ],
+      "files": {
+        "LICENSE-APACHE": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+        "LICENSE-MIT": "9bb3b077cc8628334bab25961223dd8207252c8a56aa054195be38f1c042aaf4",
+        "README.md": "e0349ebb562af4a40eace43b996bd6065a5529c8f7a02006a72e7a2a55c3bfde",
+        "THIRD_PARTY_LICENSES.txt": "b88d4cbac1ed277b89df5032f3b8e9a912e768c85eeb35fea83d2e3a2b53402e",
+        "UNDICI_LICENSE": "a6db8096b2707bc0102d256917d4d33f298ba36d8c3f25de067a2b5bb379db27",
+        "UPSTREAM_README.md": "34bd4f9f21c0e3c9dabd4bcc9b0e4c63a9c9fdfcea1aeaba552523cdcc71cc1d",
+        "bin/cf-wrangler.js": "88a2228a12ec8fff1e5a29ac7421ab38e1ad04a570b5ebfeb1d28f77796dc895",
+        "bin/wrangler.js": "780661a508810f3b65786895b1ca9aacbc4f55d329ae6b8c1e49ec8433569f77",
+        "config-schema.json": "d239d961fa53ba630ebe4a47e64bb079d88fa2eaec030caeef0f3feb37adfd2c",
+        "kv-asset-handler.js": "6f1fde6806a68eaa919a699f2af7e95f93fd0bdcb8c6d717042cb6c01bf3e11f",
+        "package.json": "b8fd408163d2604bdbcbf4833bd594b03f1ba8b947a21c4bb5f951e65a9b3b83",
+        "templates/checked-fetch.js": "903607e07decdc5226344846be2599813ff9fb135d295d1416053210536653b6",
+        "templates/middleware/common.ts": "145d9d09411948a86c55689bd2ac729297259a2dd3491ee91d963c04b3e3bd87",
+        "templates/middleware/loader-modules.ts": "d6f7d092636eff0bb86f20612d136aab02b8f46a9005c5a74fb4b8e5f7e41498",
+        "templates/middleware/loader-sw.ts": "586ccc567e44062274f0fbb38874c86986a5c548e42e4c317f67a9122a75381b",
+        "templates/middleware/middleware-ensure-req-body-drained.ts": "161d2d0ec418a0fd243aca68d7981973bc2debface0785f466db609e67900e83",
+        "templates/middleware/middleware-miniflare3-json-error.ts": "f391b766d919e9c5f9374e972d29c18ee302f4f9c3e22e7fb0a28fc3fc24abc1",
+        "templates/middleware/middleware-patch-console-prefix.ts": "ded3109f673c000fd78135b72273523cfef9be6739b5cfa3c4e07281944a07f7",
+        "templates/middleware/middleware-pretty-error.ts": "6c15d320a0c150eac09db4c9e75725fd24a33c78695c758d4eb09f64452b21b8",
+        "templates/middleware/middleware-scheduled.ts": "3bf519476a8c4b69491218fe1aa42c4f769e9ddc12ac8b8b5e30ca584a6ff446",
+        "templates/modules-watch-stub.js": "085f6df95ebf78e7a3fa21f105ac80e80611aa30756bcd15b2af45e2b315a366",
+        "templates/no-op-worker.js": "7c9ff6cccf70379acdda4ac4e631542572b7bb8dac6a59ea1f0b415cd36fc6bc",
+        "templates/pages-dev-pipeline.ts": "90bde248506965565eab15836f4bd4bd5436c35f217f6f77fe6422a81ce9c5e5",
+        "templates/pages-dev-util.ts": "000e5d1634879510274a1056ee148c61a063bf5e18b795838052a80a5bc11975",
+        "templates/pages-shim.ts": "0c525b0ff043431a3ee59fd55dccf4ff56dac44434c487ed36f277bbe68a1970",
+        "templates/pages-template-plugin.ts": "a3a44a2b3571e0b8b41f3d2e302dd15692415d5195cb0241c4fe651f750bd011",
+        "templates/pages-template-worker.ts": "f159bb8a73bdb8efb1fa1022fcbcfd6fda6958a8c855ed357369441040d69e33",
+        "wrangler-dist/InspectorProxyWorker.js": "df845e379e911f4440a6dc7e8ba69e5fc50375a0626094b0e45d9fa09950a475",
+        "wrangler-dist/InspectorProxyWorker.js.map": "ee8ca1da874a4790545647fb1b859e1ad533949e8f2305439e87d9e6c5c58d42",
+        "wrangler-dist/ProxyWorker.js": "b6cfaa0e1e3d7123ea461c4e179f9b9e40b9621fe9d7ed10d41e4ddaa2f040e1",
+        "wrangler-dist/ProxyWorker.js.map": "e59cf911e9ad9fac814b89b18b0a8682540309a5a167c0420c6d021dda8eb2d4",
+        "wrangler-dist/cli.d.ts": "600c7dea5fbe59701348659a401c7d34df38311576fa994b2b866eda22cb30eb",
+        "wrangler-dist/cli.js": "dc5c4d59dd1c70645b695b63f62826604953a986048b23d557ff81d306c06b91",
+        "wrangler-dist/cli.js.map": "662f27e267e01f4b3448710417a41d7ba787ac63d84584112811da143751c1fe",
+        "wrangler-dist/experimental-config.d.mts": "8d0f1e04a58554a69837a8ab95b9e9972876d45ed26ca6364b05ec38e8e3a3ac",
+        "wrangler-dist/experimental-config.d.mts.map": "98b9955eed686fb75a2e551a7fc1bf4e016c2205f9e57abd6d82d4e280c0d42c",
+        "wrangler-dist/experimental-config.mjs": "923b9bd0297172d2b7fc34145b442890ba7b7ccb6be6137798e48aa9d8e8b05e",
+        "wrangler-dist/experimental-config.mjs.map": "44d2d23cbe5ad1b130fd227a745c67282d177ebf2b6091544862ed559ae1dc3c"
+      }
+    }
+  ]
+}

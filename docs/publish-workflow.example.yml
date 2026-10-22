@@ -1,0 +1,14 @@
+# Inactive local review example; stored outside .github/workflows.
+# A verified publishing client and separately approved account/security setup
+# are required before designing an executable publication workflow.
+name: Publication remains disabled
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  hold:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Publication is disabled in this review candidate."
+          exit 1

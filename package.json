@@ -1,0 +1,13 @@
+{
+  "name": "dependency-publication-review-source",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.22.1"
+  },
+  "scripts": {
+    "pack": "node scripts/pack.mjs",
+    "check": "node scripts/check.mjs"
+  }
+}

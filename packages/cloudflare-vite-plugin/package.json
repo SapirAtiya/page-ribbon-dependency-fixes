@@ -1,0 +1,67 @@
+{
+  "name": "@page-and-ribbon/cloudflare-vite-plugin",
+  "version": "1.63.0-page-ribbon.undici.1",
+  "private": false,
+  "description": "Cloudflare plugin for Vite",
+  "keywords": [
+    "cloudflare",
+    "cloudflare-workers",
+    "vite",
+    "vite-plugin",
+    "workers"
+  ],
+  "homepage": "https://github.com/SapirAtiya/page-ribbon-dependency-fixes",
+  "bugs": {
+    "url": "https://github.com/SapirAtiya/page-ribbon-dependency-fixes/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SapirAtiya/page-ribbon-dependency-fixes.git",
+    "directory": "packages/cloudflare-vite-plugin"
+  },
+  "bin": {
+    "cf-vite": "./bin/cf-vite"
+  },
+  "files": [
+    "LICENSE-APACHE",
+    "LICENSE-MIT",
+    "README.md",
+    "THIRD_PARTY_LICENSES.txt",
+    "UNDICI_LICENSE",
+    "UPSTREAM_README.md",
+    "bin",
+    "dist"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "provenance": true,
+    "tag": "language-fixes"
+  },
+  "dependencies": {
+    "@cloudflare/unenv-preset": "2.16.2",
+    "miniflare": "5.20261006.0-alpha",
+    "unenv": "2.0.0-rc.24",
+    "workerd": "1.20261006.1",
+    "wrangler": "npm:@page-and-ribbon/wrangler@4.148.0-page-ribbon.undici.1",
+    "ws": "8.21.0"
+  },
+  "peerDependencies": {
+    "vite": "^6.1.0 || ^7.0.0 || ^8.0.0",
+    "wrangler": "4.148.0-page-ribbon.undici.1"
+  },
+  "workers-sdk": {
+    "prerelease": true
+  }
+}

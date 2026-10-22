@@ -1,0 +1,43 @@
+{
+  "name": "@page-and-ribbon/glob-sync",
+  "version": "0.1.4",
+  "private": false,
+  "main": "index.mjs",
+  "license": "MIT",
+  "dependencies": {
+    "picomatch": "4.0.4",
+    "glob-parent": "5.1.2",
+    "@nodelib/fs.walk": "1.2.8",
+    "fill-range": "7.1.1"
+  },
+  "files": [
+    "index.mjs",
+    "braces.mjs",
+    "FAST_GLOB_LICENSE",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "description": "Bounded synchronous file discovery for two maintained dependency forks.",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "provenance": true,
+    "tag": "language-fixes"
+  },
+  "upstream": {
+    "name": "owned adapter",
+    "version": "0.1.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SapirAtiya/page-ribbon-dependency-fixes.git",
+    "directory": "packages/glob-sync"
+  },
+  "homepage": "https://github.com/SapirAtiya/page-ribbon-dependency-fixes",
+  "bugs": {
+    "url": "https://github.com/SapirAtiya/page-ribbon-dependency-fixes/issues"
+  }
+}
